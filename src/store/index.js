@@ -11,10 +11,16 @@ export default new Vuex.Store({
   },
   mutations: {
     increment(state, activityName) {
-      console.log("increment");
+      state.activities
+        .filter((activity) => activity.name === `${activityName}`)
+        .map((activity) => activity.rating++);
+      // console.log("increment");
     },
     decrement(state, activityName) {
-      console.log("decrement");
+      state.activities
+        .filter((activity) => activity.name === `${activityName}`)
+        .map((activity) => activity.rating--);
+      // console.log("decrement");
     },
   },
   actions: {},
