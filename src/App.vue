@@ -1,17 +1,37 @@
 <template>
   <div id="app">
     <Form />
+    <div class="mt-6">
+      <ul>
+        <Activities
+          v-for="item in activities"
+          v-bind:activity="item"
+          v-bind:emojis="emojis"
+          v-bind:key="item.name"
+        />
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 import Form from "./components/Form.vue";
+import Activities from "./components/Activities.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "App",
   components: {
     Form,
+    Activities,
   },
+  // data() {
+  //   return { activities };
+  // },
+  computed: mapState({
+    activities: (state) => state.activities,
+    emojis: (state) => state.emojis,
+  }),
 };
 </script>
 

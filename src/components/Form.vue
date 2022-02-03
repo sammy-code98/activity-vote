@@ -4,6 +4,7 @@
       <form class="md:flex md:flex-row">
         <input
           type="text"
+          v-model="activityName"
           placeholder="Add Activity"
           class="shadow-lg border rounded px-3 py-2 w-full border-gray-500"
         />
@@ -20,6 +21,12 @@
 <script>
 export default {
   name: "Form",
+  data() {
+    return {
+      activityName: "",
+    };
+  },
+
   props: {},
 };
 </script>
