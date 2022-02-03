@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    activities: [{ name: "code for 20 hours", rating: 5 }],
+    activities: [],
     emojis: { yay: "🤩", nice: "😀", meh: "😐", argh: "🤬", hateIt: "💩" },
   },
   mutations: {
