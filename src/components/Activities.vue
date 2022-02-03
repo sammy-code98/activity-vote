@@ -22,7 +22,6 @@
           👍
         </button>
       </span>
-      <!-- <span>{{ emojis[0] }}</span> -->
     </li>
   </div>
 </template>
