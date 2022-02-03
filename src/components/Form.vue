@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <form class="md:flex md:flex-row">
+      <form class="md:flex md:flex-row" @submit="onSubmit">
         <input
           type="text"
           v-model="activityName"
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Form",
 
@@ -29,11 +28,14 @@ export default {
     };
   },
   methods: {
+    addActivity(activityName) {
+      this.$store.commit("addActivity", activityName);
+    },
+    onSubmit(e) {
+      e.preventDefault();
+      this.addActivity(this.activityName);
+      this.activityName = "";
+    },
   },
-
-  props: {},
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>

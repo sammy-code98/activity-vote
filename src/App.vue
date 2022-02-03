@@ -27,9 +27,6 @@ export default {
     Form,
     Activities,
   },
-  // data() {
-  //   return { activities };
-  // },
   computed: mapState({
     activities: (state) => state.activities,
     emojis: (state) => state.emojis,

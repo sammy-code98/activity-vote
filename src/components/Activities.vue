@@ -1,6 +1,8 @@
 <template>
   <div class="container px-4">
-    <li class="bg-gray-200 shadow-sm w-full rounded-md md:space-x-5 md:m-4">
+    <li
+      class="bg-gray-200 shadow-sm w-full mb-4 rounded-md md:space-x-5 md:m-4"
+    >
       <span class="text-lg text-gray-500"
         >{{ activity.name }}
         <span v-if="activity.rating <= -5">{{ emojis.hateIt }}</span>
