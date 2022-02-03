@@ -6,6 +6,9 @@ module.exports = {
       center: true,
       padding: "4rem",
     },
+    fontFamily: {
+      custom: ["Sniglet", "cursive"],
+    },
     extend: {},
   },
   variants: {

@@ -3,7 +3,7 @@
     <li
       class="bg-gray-200 shadow-sm w-full mb-4 rounded-md md:space-x-5 md:m-4"
     >
-      <span class="text-lg text-gray-500"
+      <span class="text-lg text-gray-500 font-custom"
         >{{ activity.name }}
         <span v-if="activity.rating <= -5">{{ emojis.hateIt }}</span>
         <span v-else-if="activity.rating <= -3">{{ emojis.argh }}</span>
