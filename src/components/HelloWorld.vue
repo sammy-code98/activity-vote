@@ -1,5 +1,5 @@
 <template>
-  <div>helelel</div>
+  <div class="text-8xl text-blue-500">helelel</div>
 </template>
 
 <script>
