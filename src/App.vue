@@ -38,9 +38,9 @@ export default {
     increment(activityName) {
       this.$store.commit("increment", activityName);
     },
-    decrement(activityName){
-      this.$store.commit("decrement", activityName)
-    }
+    decrement(activityName) {
+      this.$store.commit("decrement", activityName);
+    },
   },
 };
 </script>
