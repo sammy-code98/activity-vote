@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Vue from "vue";
 import Vuex from "vuex";
 
@@ -8,7 +9,14 @@ export default new Vuex.Store({
     activities: [{ name: "code for 20 hours", rating: 5 }],
     emojis: { yay: "🤩", nice: "😀", meh: "😐", argh: "🤬", hateIt: "💩" },
   },
-  mutations: {},
+  mutations: {
+    increment(state, activityName) {
+      console.log("increment");
+    },
+    decrement(state, activityName) {
+      console.log("decrement");
+    },
+  },
   actions: {},
   modules: {},
 });

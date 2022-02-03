@@ -5,12 +5,14 @@
       <span>{{ emojis[0] }}</span>
       <button
         class="bg-white shadow-md rounded-full m-3 px-2 py-2 md:px-3 md:py-2 md:m-3"
+        @click="decrement(activity.name)"
       >
         👎
       </button>
       {{ activity.rating }}
       <button
         class="bg-white shadow-md rounded-full m-3 px-2 py-2 md:px-3 md:py-2 md:m-3"
+        @click="increment(activity.name)"
       >
         👍
       </button>
@@ -21,7 +23,7 @@
 <script>
 export default {
   name: "Activities",
-  props: ["activity", "emojis"],
+  props: ["activity", "emojis", "increment", "decrement"],
 };
 </script>
 

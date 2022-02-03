@@ -8,6 +8,8 @@
           v-bind:activity="item"
           v-bind:emojis="emojis"
           v-bind:key="item.name"
+          v-bind:increment="increment"
+          v-bind:decrement="decrement"
         />
       </ul>
     </div>
@@ -32,6 +34,14 @@ export default {
     activities: (state) => state.activities,
     emojis: (state) => state.emojis,
   }),
+  methods: {
+    increment(activityName) {
+      this.$store.commit("increment", activityName);
+    },
+    decrement(activityName){
+      this.$store.commit("decrement", activityName)
+    }
+  },
 };
 </script>
 
