@@ -19,12 +19,16 @@
 </template>
 
 <script>
+
 export default {
   name: "Form",
+
   data() {
     return {
       activityName: "",
     };
+  },
+  methods: {
   },
 
   props: {},

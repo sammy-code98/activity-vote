@@ -22,6 +22,9 @@ export default new Vuex.Store({
         .map((activity) => activity.rating--);
       // console.log("decrement");
     },
+    addActivity(state, name) {
+      state.activities.push({ name, rating: 0 });
+    },
   },
   actions: {},
   modules: {},
